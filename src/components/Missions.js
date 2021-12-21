@@ -7,11 +7,23 @@ export const Missions = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (!missions.length) dispaatch(fetchMissions())
+    if (!missions.length) dispatch(fetchMissions())
   }, [])
+
+
   return (
-    <div>
-      <p>work </p>
-    </div>
+    <main className='main'>
+      <table className='missions-table'>
+        <thead>
+          <tr>
+            <th>Missions</th>
+            <th>Descriptions</th>
+            <th>Status</th>
+            <th>Join</th>
+          </tr>
+        </thead>
+        tb
+      </table>
+    </main>
   )
 }
