@@ -13,8 +13,8 @@ const Header = () => (
           <img
             src={logo}
             alt="logo-img"
-            width="100"
-            height="100"
+            width="106"
+            height="106"
           />
           <h1 className="mx-4"> Space Travelers&apos; Hub </h1>
         </Navbar.Brand>
@@ -22,7 +22,7 @@ const Header = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <Nav.Link href="#home">Rockets</Nav.Link>
+          <LinkContainer to="/"><Nav.Link>Rockets</Nav.Link></LinkContainer>
           <Nav.Link href="#link">Missions</Nav.Link>
           <LinkContainer to="/Profile"><Nav.Link>Profile</Nav.Link></LinkContainer>
         </Nav>
