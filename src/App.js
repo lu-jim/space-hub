@@ -6,6 +6,7 @@ import Profile from './components/Profile';
 import logo from './img/rocket-logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { Missions } from './components/Missions';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
       </div>
       <Routes>
         <Route path="/Profile" element={<Profile />} />
+      </Routes>
+      <Routes>
+        <Route path ='/Missions' element={<Missions />} />
       </Routes>
     </Router>
   );
