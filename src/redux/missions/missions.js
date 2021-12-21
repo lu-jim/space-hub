@@ -1,4 +1,4 @@
-const POPULATE_MISSIONS = 'missions/POPULATE_MISSIONS'
+const POPULATE_MISSIONS = 'missions/POPULATE_MISSIONS';
 const initialState = [];
 
 const missionsReducer = (state = initialState, action) => {
