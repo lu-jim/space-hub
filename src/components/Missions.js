@@ -29,7 +29,8 @@ export const Missions = () => {
               <tr key={mission.mission_id} className={colorClass}>
                 <th className='mission-title'>{mission.mission_name}</th>
                 <td>{mission.description}</td>
-                <td cla></td>
+                <td className="mission-status">Not a member</td>
+                <td className="mission-join">Join Mission</td>
               </tr>
             )
           })}
