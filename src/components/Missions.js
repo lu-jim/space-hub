@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
 
-export const Missions = () => {
+const Missions = () => {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
@@ -38,3 +38,5 @@ export const Missions = () => {
     </main>
   );
 };
+
+export default Missions
