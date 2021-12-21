@@ -27,7 +27,9 @@ export const Missions = () => {
             const colorClass = index % 2 === 0 ? 'grey-bg' : 'white-bg';
             return (
               <tr key={mission.mission_id} className={colorClass}>
-                <th></th>
+                <th className='mission-title'>{mission.mission_name}</th>
+                <td>{mission.description}</td>
+                <td cla></td>
               </tr>
             )
           })}
