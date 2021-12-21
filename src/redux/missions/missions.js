@@ -27,3 +27,5 @@ export const fetchMissions = () => async (dispatch) => {
     dispatch(populateMissions(newMissions));
   }
 };
+
+export default missionsReducer;
