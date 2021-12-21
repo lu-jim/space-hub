@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
+import { NavLink } from 'react-router-dom';
 import logo from '../img/rocket-logo.png';
 
 const Header = () => (
@@ -23,7 +24,8 @@ const Header = () => (
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
           <Nav.Link href="#home">Rockets</Nav.Link>
-          <Nav.Link href="/Missions">Missions</Nav.Link>
+          {/* <Nav.Link href="#missions">Missions</Nav.Link> */}
+          <NavLink to="/Missions">Missio</NavLink>
           <LinkContainer to="/Profile"><Nav.Link>Profile</Nav.Link></LinkContainer>
         </Nav>
       </Navbar.Collapse>

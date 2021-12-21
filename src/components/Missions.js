@@ -39,4 +39,4 @@ const Missions = () => {
   );
 };
 
-export default Missions
+export default Missions;

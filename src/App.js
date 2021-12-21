@@ -6,7 +6,7 @@ import Profile from './components/Profile';
 import logo from './img/rocket-logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Missions } from './components/Missions';
+import Missions from './components/Missions';
 
 function App() {
   return (
