@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
-import './Missions.css'
+import './Missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
