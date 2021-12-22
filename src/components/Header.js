@@ -25,7 +25,7 @@ const Header = () => (
         <Nav className="ms-auto">
           <NavLink to="/rockets"> Rockets</NavLink>
           <NavLink to="/missions">Missions</NavLink>
-          <NavLink to="/profile">Profile</NavLink>
+          <NavLink to="/Profile">Profile</NavLink>
         </Nav>
       </Navbar.Collapse>
     </Container>
