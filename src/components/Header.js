@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-// import { LinkContainer } from 'react-router-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { NavLink } from 'react-router-dom';
 import logo from '../img/rocket-logo.png';
 
@@ -23,9 +23,15 @@ const Header = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <NavLink to="/rockets"> Rockets</NavLink>
-          <NavLink to="/missions">Missions</NavLink>
-          <NavLink to="/Profile">Profile</NavLink>
+          <LinkContainer to="/rockets">
+            <Nav.Link>Rockets</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/missions">
+            <Nav.Link>Missions</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/Profile">
+            <Nav.Link>Profile</Nav.Link>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
     </Container>
