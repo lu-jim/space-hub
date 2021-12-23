@@ -7,7 +7,11 @@ const missionsReducer = (state = initialState, action) => {
     case POPULATE_MISSIONS:
       return action.payload;
     case TOGGLE_RESERVATION:
-      return state.map((mission) => (mission.mission_id === action.payload ? { ...mission, reserved: !mission.reserved } : mission));
+      return state.map((mission) => (mission.mission_id === action.payload
+        ? {
+          ...mission,
+          reserved: !mission.reserved,
+        } : mission));
     default:
       return state;
   }
