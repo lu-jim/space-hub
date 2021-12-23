@@ -10,6 +10,10 @@ const Missions = () => {
     if (!missions.length) dispatch(fetchMissions());
   }, []);
 
+  const handleMissionReservation = (id) => {
+    dispatch(toggleMissionReservation(id))
+  }
+
   return (
     <main className="main">
       <table className="missions-table">
