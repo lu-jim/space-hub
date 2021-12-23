@@ -9,6 +9,21 @@ const Badge = ({ text, isActive = false }) => {
     textTransform: isActive ? 'capitalize' : 'uppercase',
     alignSelf: 'flex-start',
     borderRadius: '4px',
-    display: 'inline-flex'
+    display: 'inline-flex',
+    fontSize: '80%',
+    fontWeight: 'bold'
   }
+
+  return (
+    <span className="align-center" style={style}>
+      {text}
+    </span>
+  )
 }
+
+Badge.propTypes = {
+  text: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired
+}
+
+export default Badge
