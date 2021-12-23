@@ -38,7 +38,10 @@ const Missions = () => {
                   />
                 </td>
                 <td className="mission-join">
-                  <Button />
+                  <Button
+                    isMissionJoined={mission.reserved}
+                    onClick ={() =>handleMissionReservation(mission.mission.id)}
+                  />
                 </td>
               </tr>
             );
