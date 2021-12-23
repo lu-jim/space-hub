@@ -8,10 +8,8 @@ const missionsReducer = (state = initialState, action) => {
       return action.payload;
     case TOGGLE_RESERVATION:
       return state.map((mission) => (mission.mission_id === action.payload
-        ? {
-          ...mission,
-          reserved: !mission.reserved,
-        } : mission));
+        ? { ...mission, reserved: !mission.reserved }
+        : mission));
     default:
       return state;
   }
@@ -29,6 +27,7 @@ export const fetchMissions = () => async (dispatch) => {
     mission_id: mission.mission_id,
     mission_name: mission.mission_name,
     description: mission.description,
+    reserved: false,
   }));
   if (response.ok) {
     dispatch(populateMissions(newMissions));
