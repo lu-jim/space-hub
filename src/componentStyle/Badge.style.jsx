@@ -24,4 +24,5 @@ Badge.propTypes = {
   text: PropTypes.string.isRequired,
   isActive: PropTypes.bool.isRequired,
 };
+
 export default Badge
