@@ -11,8 +11,8 @@ const Missions = () => {
   }, []);
 
   const handleMissionReservation = (id) => {
-    dispatch(toggleMissionReservation(id))
-  }
+    dispatch(toggleMissionReservation(id));
+  };
 
   return (
     <main className="main">
@@ -33,14 +33,15 @@ const Missions = () => {
                 <th className="mission-title">{mission.mission_name}</th>
                 <td>{mission.description}</td>
                 <td className="mission-status">
-                  <Badge text={mission.reserved ? 'active-member' : 'NOt a member'}
-                    isActive = {mission.reserved}
+                  <Badge
+                    text={mission.reserved ? 'active-member' : 'NOt a member'}
+                    isActive={mission.reserved}
                   />
                 </td>
                 <td className="mission-join">
                   <Button
                     isMissionJoined={mission.reserved}
-                    onClick ={() =>handleMissionReservation(mission.mission.id)}
+                    onClick={() => handleMissionReservation(mission.mission.id)}
                   />
                 </td>
               </tr>

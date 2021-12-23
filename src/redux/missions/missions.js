@@ -1,5 +1,5 @@
 const POPULATE_MISSIONS = 'missions/POPULATE_MISSIONS';
-const TOGGLE_RESERVATION = 'missions/TOGGLE_STATUS'
+const TOGGLE_RESERVATION = 'missions/TOGGLE_STATUS';
 const initialState = [];
 
 const missionsReducer = (state = initialState, action) => {
@@ -7,7 +7,7 @@ const missionsReducer = (state = initialState, action) => {
     case POPULATE_MISSIONS:
       return action.payload;
     case TOGGLE_RESERVATION:
-      return state.map((mission) => (mission.mission_id === action.payload ? { ...mission, reserved: !mission.reserved} :mission))
+      return state.map((mission) => (mission.mission_id === action.payload ? { ...mission, reserved: !mission.reserved } : mission));
     default:
       return state;
   }
@@ -34,6 +34,6 @@ export const fetchMissions = () => async (dispatch) => {
 export const toggleMissionReservation = (payload) => ({
   type: TOGGLE_RESERVATION,
   payload,
-})
+});
 
 export default missionsReducer;
