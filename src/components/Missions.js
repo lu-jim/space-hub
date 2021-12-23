@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missions';
+import Badge from '../componentStyle/Badge.style';
+import Button from '../componentStyle/Button.style';
+import { fetchMissions, toggleMissionReservation } from '../redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
@@ -9,6 +11,10 @@ const Missions = () => {
   useEffect(() => {
     if (!missions.length) dispatch(fetchMissions());
   }, []);
+
+  const handleMissionReservation = (id) => {
+    dispatch(toggleMissionReservation(id));
+  };
 
   return (
     <main className="main">
@@ -26,10 +32,20 @@ const Missions = () => {
             const colorClass = index % 2 === 0 ? 'grey-bg' : 'white-bg';
             return (
               <tr key={mission.mission_id} className={colorClass}>
-                <th className="mission-title">{mission.mission_name}</th>
+                <td className="mission-title">{mission.mission_name}</td>
                 <td>{mission.description}</td>
-                <td className="mission-status">Not a member</td>
-                <td className="mission-join">Join Mission</td>
+                <td className="mission-status">
+                  <Badge
+                    text={mission.reserved ? 'active member' : 'NOT A MEMBER'}
+                    isActive={mission.reserved}
+                  />
+                </td>
+                <td className="mission-join">
+                  <Button
+                    isMissionJoined={mission.reserved}
+                    onClick={() => handleMissionReservation(mission.mission_id)}
+                  />
+                </td>
               </tr>
             );
           })}
