@@ -1,5 +1,5 @@
-import React from "react";
-import { PropTypes } from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Badge = ({ text, isActive = false }) => {
   const style = {
@@ -11,19 +11,17 @@ const Badge = ({ text, isActive = false }) => {
     borderRadius: '4px',
     display: 'inline-flex',
     fontSize: '80%',
-    fontWeight: 'bold'
-  }
-
+    fontWeight: 'bold',
+  };
   return (
     <span className="align-center" style={style}>
       {text}
     </span>
-  )
-}
+  );
+};
 
 Badge.propTypes = {
   text: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired
-}
-
+  isActive: PropTypes.bool.isRequired,
+};
 export default Badge
