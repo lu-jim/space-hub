@@ -5,24 +5,24 @@ import { getRockets } from '../../redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getRockets());
-  }, []);
   const rocketList = useSelector((state) => state.rockets.rockets);
-  const newList = rocketList.map(({
-    id, rocketName, description, flickrImages,
-  }) => (
-    <RocketCard
-      id={id}
-      key={id}
-      rocketName={rocketName}
-      description={description}
-      flickrImages={flickrImages}
-    />
-  ));
+  useEffect(() => {
+    if (!rocketList.length) dispatch(getRockets());
+  }, []);
   return (
     <div id="rocket-list">
-      {newList}
+      {rocketList.map(({
+        id, rocketName, description, flickrImages, booked,
+      }) => (
+        <RocketCard
+          id={id}
+          key={id}
+          rocketName={rocketName}
+          description={description}
+          flickrImages={flickrImages}
+          booked={booked}
+        />
+      ))}
     </div>
   );
 };

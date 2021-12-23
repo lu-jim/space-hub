@@ -8,6 +8,7 @@ import Rockets from './components/Rockets/Rockets';
 import store from './redux/configureStore';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Missions from './components/Missions';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Rockets />} />
-          <Route path="/Profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/missions" element={<Missions />} />
         </Routes>
       </Router>
     </Provider>

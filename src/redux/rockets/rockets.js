@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const GET_ROCKETS = 'rockets/GET_ROCKETS';
-const BOOK_ROCKET = 'rockets/BOOK_ROCKET';
+const TOGGLE_BOOKING = 'rockets/TOGGLE_BOOKING';
 const url = 'https://api.spacexdata.com/v3/rockets/';
 
 const initialState = { rockets: [] };
@@ -24,20 +24,20 @@ export const getRockets = () => async (dispatch) => {
 export const bookRocket = (state = initialState, id) => {
   const bookedRockets = state.map((rocket) => {
     if (rocket.id !== id) return rocket;
-    return { ...rocket, reserved: true };
+    return { ...rocket, booked: true };
   });
   return {
-    type: BOOK_ROCKET,
+    type: TOGGLE_BOOKING,
     payload: bookedRockets,
   };
 };
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
+const reducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case GET_ROCKETS:
-      return { ...state, rockets: action.payload };
-    case BOOK_ROCKET:
-      return { ...state, rockets: action.payload };
+      return { ...state, rockets: payload };
+    case TOGGLE_BOOKING:
+      return { ...state, rockets: payload };
     default:
       return state;
   }

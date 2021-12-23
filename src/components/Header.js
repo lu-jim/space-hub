@@ -13,8 +13,8 @@ const Header = () => (
           <img
             src={logo}
             alt="logo-img"
-            width="106"
-            height="106"
+            width="100"
+            height="100"
           />
           <h1 className="mx-4"> Space Travelers&apos; Hub </h1>
         </Navbar.Brand>
@@ -23,8 +23,12 @@ const Header = () => (
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
           <LinkContainer to="/"><Nav.Link>Rockets</Nav.Link></LinkContainer>
-          <Nav.Link href="#link">Missions</Nav.Link>
-          <LinkContainer to="/Profile"><Nav.Link>Profile</Nav.Link></LinkContainer>
+          <LinkContainer to="/missions">
+            <Nav.Link>Missions</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/profile">
+            <Nav.Link>Profile</Nav.Link>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
     </Container>

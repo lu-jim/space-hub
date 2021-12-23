@@ -14,6 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: red;
 }
 
 code {
@@ -24,4 +25,33 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+.missions-table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+td,
+th {
+  border: 2px solid #dfdfdf;
+  padding: 10px;
+}
+
+.status-col,
+.join-col {
+  min-width: 10vw;
+}
+
+.mission-title {
+  vertical-align: text-top;
+}
+
+.mission-status,
+.mission-join {
+  text-align: center;
+}
+
+.grey-bg {
+  background-color: #f3f3f3;
 }
