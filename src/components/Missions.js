@@ -32,8 +32,14 @@ const Missions = () => {
               <tr key={mission.mission_id} className={colorClass}>
                 <th className="mission-title">{mission.mission_name}</th>
                 <td>{mission.description}</td>
-                <td className="mission-status">Not a member</td>
-                <td className="mission-join">Join Mission</td>
+                <td className="mission-status">
+                  <Badge text={mission.reserved ? 'active-member' : 'NOt a member'}
+                    isActive = {mission.reserved}
+                  />
+                </td>
+                <td className="mission-join">
+                  <Button />
+                </td>
               </tr>
             );
           })}
