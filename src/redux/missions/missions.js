@@ -31,4 +31,9 @@ export const fetchMissions = () => async (dispatch) => {
   }
 };
 
+export const toggleMissionReservation = (payload) => ({
+  type: TOGGLE_RESERVATION,
+  payload,
+})
+
 export default missionsReducer;
