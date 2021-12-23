@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missions';
+import Badge from '../componentStyle/Badge.style';
+import { fetchMissions, toggleMissionReservation } from '../redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
