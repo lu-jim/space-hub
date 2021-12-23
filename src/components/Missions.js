@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Badge from '../componentStyle/Badge.style';
+import Button from '../componentStyle/Button.style';
 import { fetchMissions, toggleMissionReservation } from '../redux/missions/missions';
 
 const Missions = () => {
