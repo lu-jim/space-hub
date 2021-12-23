@@ -32,18 +32,18 @@ const Missions = () => {
             const colorClass = index % 2 === 0 ? 'grey-bg' : 'white-bg';
             return (
               <tr key={mission.mission_id} className={colorClass}>
-                <th className="mission-title">{mission.mission_name}</th>
+                <td className="mission-title">{mission.mission_name}</td>
                 <td>{mission.description}</td>
                 <td className="mission-status">
                   <Badge
-                    text={mission.reserved ? 'active-member' : 'NOt a member'}
+                    text={mission.reserved ? 'active member' : 'NOT A MEMBER'}
                     isActive={mission.reserved}
                   />
                 </td>
                 <td className="mission-join">
                   <Button
                     isMissionJoined={mission.reserved}
-                    onClick={() => handleMissionReservation(mission.mission.id)}
+                    onClick={() => handleMissionReservation(mission.mission_id)}
                   />
                 </td>
               </tr>
