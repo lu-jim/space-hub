@@ -25,7 +25,20 @@ const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
       backgroundColor: 'transparent',
       border: isMissionJoined ? '1px solid #de4250' : '1px solid e343a40',
       color: isMissionJoined ? '#de4250' : '#343a40',
-    }
-    
+    };
+    text = isMissionJoined ? 'Leave mission' : 'join mission'
   }
+  return (
+    <button type="button" onClick={onClick} style={style}>
+      {text}
+    </button>
+  )
 }
+
+Button.PropTypes = {
+  isRocketReserved: PropTypes.bool,
+  isMissionJoined: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+}
+
+export default Button
