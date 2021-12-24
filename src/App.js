@@ -1,39 +1,27 @@
 import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Header from './components/Header';
 import Profile from './components/Profile';
-import logo from './img/rocket-logo.png';
+import Rockets from './components/Rockets/Rockets';
+import store from './redux/configureStore';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Missions from './components/Missions';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit
-            {' '}
-            <code>src/App.js</code>
-            {' '}
-            and save to reload.
-          </p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-        </header>
-      </div>
-      <Routes>
-        <Route path="/Profile" element={<Profile />} />
-      </Routes>
-      <Routes>
-        <Route path="/missions" element={<Missions />} />
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Rockets />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/missions" element={<Missions />} />
+        </Routes>
+      </Router>
+    </Provider>
   );
 }
 

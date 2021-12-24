@@ -55,9 +55,9 @@ const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
 };
 
 Button.propTypes = {
-  isRocketReserved: PropTypes.bool,
-  isMissionJoined: PropTypes.bool,
+  isRocketReserved: PropTypes.bool.isRequired,
+  isMissionJoined: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
-export default Button
+export default Button;

@@ -25,4 +25,4 @@ Badge.propTypes = {
   isActive: PropTypes.bool.isRequired,
 };
 
-export default Badge
+export default Badge;
