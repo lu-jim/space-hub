@@ -13,10 +13,11 @@ const ReservedRockets = () => {
 
   return (
     <section>
-      <ul>
+      <h2 className="mb-2"> My Rockets</h2>
+      <ul className="row col-12 lg-col6 border m-2 p-2 rounded">
         {!!reservedList
           && reservedList.map(({ rocketId, rocketName, isBooked }) => (
-            <li key={rocketId}>
+            <li key={rocketId} className="d-flex justify-content-between border-bottom align-items-baseline pt-4">
               <h3>
                 {rocketName}
               </h3>
