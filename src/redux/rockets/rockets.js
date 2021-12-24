@@ -14,6 +14,7 @@ export const getRockets = () => async (dispatch) => {
     rocketName: rocket.rocket_name,
     description: rocket.description,
     flickrImages: rocket.flickr_images,
+    wikipedia: rocket.wikipedia,
   }));
   dispatch({
     type: GET_ROCKETS,

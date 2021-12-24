@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import RocketBadge from './RocketBadge';
 import BookButton from './BookButton';
 import { bookRocket } from '../../redux/rockets/rockets';
 
@@ -15,18 +16,27 @@ const RocketCard = (props) => {
   };
 
   return (
-    <div className="row p-3 m-0" id={rocketId}>
-      <div className="col-6 col-lg-4">
-        <img src={flickrImages[0]} alt="completed" className="img-fluid" />
+    <div className="row p-3 m-0 border-bottom" id={rocketId}>
+      <div className="col-12 col-lg-3">
+        <img
+          src={flickrImages[0]}
+          alt={rocketName}
+          className="img-fluid"
+        />
       </div>
-      <div className="col-6 col-lg-8 p-2">
-        <h2>{rocketName}</h2>
-        <p className="p-4">{description}</p>
+      <div className="col-12 col-lg-9 pt-2">
+        <h2 className="d-flex gap-2">
+          {rocketName}
+          <RocketBadge
+            isBooked={isBooked}
+          />
+
+        </h2>
+        <p className="py-4">{description}</p>
         <BookButton
           isBooked={isBooked}
           rocketId={rocketId}
           onClickEvent={(rocketId) => reserveRocket(rocketId)}
-
         />
         {' '}
       </div>
