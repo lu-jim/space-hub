@@ -16,18 +16,20 @@ const ReservedMissions = () => {
   return (
     <section className="filtered-list">
       <h2 className="filtered-list__title">My Missions</h2>
-      <ul className="filtered-list__list">
+      <ul className="mission-holder">
         {!!reservedMissions
           && reservedMissions.map((mission) => (
-            <li className="filtered-list__list__item" key={mission.mission_id}>
+            <li className="list-item" key={mission.mission_id}>
               <h3 className="filtered-list__list__item__title">
                 {mission.mission_name}
               </h3>
+              <p className="mission-item">
               <Link to={mission.link} />
               <Button
                 isMissionJoined={mission.reserved}
                 onClick={() => handleMissionReservation(mission.mission_id)}
-              />
+                />
+              </p>
             </li>
           ))}
         {!reservedMissions.length && (

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
+const Button = ({ isMissionJoined, onClick }) => {
   const focusHandler = (e) => {
     e.target.classList.toggle('button--focus');
   };
@@ -18,18 +18,7 @@ const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
   };
   let text = '';
 
-  if (isRocketReserved != null) {
-    style = {
-      ...style,
-      backgroundColor: isRocketReserved ? 'transparent' : '#007bff',
-      color: isRocketReserved ? '#9aa0a5' : '#fff',
-      border: isRocketReserved ? '1px solid #9aa0a5' : '1px solid #007bff',
-      alignSelf: 'flex-start',
-      fontSize: '1.3rem',
-      padding: '0.75rem',
-    };
-    text = isRocketReserved ? 'Cancel Reservation' : 'Reserve Rocket';
-  } else {
+   if (isMissionJoined != null) {
     style = {
       ...style,
       backgroundColor: 'transparent',
@@ -55,7 +44,6 @@ const Button = ({ isRocketReserved, isMissionJoined, onClick }) => {
 };
 
 Button.propTypes = {
-  isRocketReserved: PropTypes.bool.isRequired,
   isMissionJoined: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };
