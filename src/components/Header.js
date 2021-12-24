@@ -16,7 +16,7 @@ const Header = () => (
             width="100"
             height="100"
           />
-          <h1 className="mx-4"> Space Travelers&apos; Hub </h1>
+          <h1 className="mx-4 d-none d-md-flex"> Space Travelers&apos; Hub </h1>
         </Navbar.Brand>
       </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
