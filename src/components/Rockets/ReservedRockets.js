@@ -33,7 +33,7 @@ const ReservedRockets = () => {
                   {rocketName}
                 </h3>
               </div>
-              <p className="d-flex flex-column flex-lg-row me-3">
+              <p className="d-flex flex-column flex-lg-row me-1 me-xl-3">
                 <Link to={wikipedia} />
                 <BookButton
                   isBooked={isBooked}
