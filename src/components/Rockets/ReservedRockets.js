@@ -12,12 +12,12 @@ const ReservedRockets = () => {
   };
 
   return (
-    <section>
-      <h2 className="mb-2"> My Rockets</h2>
-      <ul className="row col-12 lg-col6 border m-2 p-2 rounded">
+    <section className="col-5">
+      <h2 className="py-2"> My Rockets</h2>
+      <ul className="row col-12 lg-col-5 border m-2 py-2 rounded">
         {!!reservedList
           && reservedList.map(({ rocketId, rocketName, isBooked }) => (
-            <li key={rocketId} className="d-flex justify-content-between border-bottom align-items-baseline pt-4">
+            <li key={rocketId} className="d-flex justify-content-between border-bottom align-items-baseline pt-4 col-12">
               <h3>
                 {rocketName}
               </h3>
@@ -31,9 +31,9 @@ const ReservedRockets = () => {
             </li>
           ))}
         {!reservedList.length && (
-          <p>
-            No reserved rockets
-          </p>
+          <h4 className="p-4 text-center text-danger">
+            No reserved rockets.  Go to the Rockets page to book one.
+          </h4>
         )}
       </ul>
     </section>
