@@ -1,8 +1,8 @@
-import React from "react";
-import { useSelector,useDispatch } from "react-redux";
-import Button from './Button.style'
-import Link from "./Link.style";
-import { toggleMissionReservation } from '../redux/missions/missions'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Button from './Button.style';
+import Link from './Link.style';
+import { toggleMissionReservation } from '../redux/missions/missions';
 
 const ReservedMissions = () => {
   const missions = useSelector((state) => state.missions);
@@ -24,10 +24,10 @@ const ReservedMissions = () => {
                 {mission.mission_name}
               </h3>
               <p className="mission-item">
-              <Link to={mission.link} />
-              <Button
-                isMissionJoined={mission.reserved}
-                onClick={() => handleMissionReservation(mission.mission_id)}
+                <Link to={mission.link} />
+                <Button
+                  isMissionJoined={mission.reserved}
+                  onClick={() => handleMissionReservation(mission.mission_id)}
                 />
               </p>
             </li>
@@ -42,4 +42,4 @@ const ReservedMissions = () => {
   );
 };
 
-export default ReservedMissions
+export default ReservedMissions;

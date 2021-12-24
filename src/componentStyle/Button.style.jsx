@@ -18,7 +18,7 @@ const Button = ({ isMissionJoined, onClick }) => {
   };
   let text = '';
 
-   if (isMissionJoined != null) {
+  if (isMissionJoined != null) {
     style = {
       ...style,
       backgroundColor: 'transparent',

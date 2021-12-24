@@ -12,15 +12,15 @@ const Rockets = () => {
   return (
     <div id="rocket-list">
       {rocketList.map(({
-        id, rocketName, description, flickrImages, booked,
+        rocketId, rocketName, description, flickrImages, isBooked,
       }) => (
         <RocketCard
-          id={id}
-          key={id}
+          rocketId={rocketId}
+          key={rocketId}
           rocketName={rocketName}
           description={description}
           flickrImages={flickrImages}
-          booked={booked}
+          isBooked={isBooked}
         />
       ))}
     </div>

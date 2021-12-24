@@ -10,7 +10,7 @@ export const getRockets = () => async (dispatch) => {
   const result = await axios.get(url);
   const rockets = result.data;
   const rocketList = rockets.map((rocket) => ({
-    id: rocket.id,
+    rocketId: rocket.id,
     rocketName: rocket.rocket_name,
     description: rocket.description,
     flickrImages: rocket.flickr_images,
@@ -21,23 +21,22 @@ export const getRockets = () => async (dispatch) => {
   });
 };
 
-export const bookRocket = (state = initialState, id) => {
-  const bookedRockets = state.map((rocket) => {
-    if (rocket.id !== id) return rocket;
-    return { ...rocket, booked: true };
-  });
-  return {
-    type: TOGGLE_BOOKING,
-    payload: bookedRockets,
-  };
-};
+export const bookRocket = (payload) => ({
+  type: TOGGLE_BOOKING,
+  payload,
+});
 
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case GET_ROCKETS:
       return { ...state, rockets: payload };
     case TOGGLE_BOOKING:
-      return { ...state, rockets: payload };
+      return {
+        ...state,
+        rockets: state.rockets.map((rocket) => (rocket.rocketId !== payload ? rocket : {
+          ...rocket, isBooked: !rocket.isBooked,
+        })),
+      };
     default:
       return state;
   }
