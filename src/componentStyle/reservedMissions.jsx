@@ -7,7 +7,15 @@ const ReservedMissions = () => {
   
   return (
     <section>
-      <h2 className="filtered-list">My Missions</h2>
+      <h2 className="filtered-list__title">My Missions</h2>
+      <ul className="filtered-list__list">
+        {!!reservedMissions && reservedMissions.map((mission) => (
+          <li>
+            <h3></h3>
+          </li>
+        ))}
+
+      </ul>
     </section>
   )
 }
