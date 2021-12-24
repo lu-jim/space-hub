@@ -11,7 +11,9 @@ const ReservedMissions = () => {
       <ul className="filtered-list__list">
         {!!reservedMissions && reservedMissions.map((mission) => (
           <li>
-            <h3></h3>
+            <h3 className="filtered-list__list__item__title" key={mission.mission_id}>
+              {mission.mission_name}
+            </h3>
           </li>
         ))}
 
