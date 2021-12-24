@@ -1,9 +1,10 @@
 import React from 'react';
+import ReservedMissions from '../componentStyle/reservedMissions';
 
 const Profile = () => (
-  <div>
-    Work in progress
-  </div>
+  <main>
+    <ReservedMissions />
+  </main>
 );
 
 export default Profile;

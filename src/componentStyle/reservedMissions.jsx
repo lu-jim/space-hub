@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Button from './Button.style'
+import Link from "./Link.style";
 import { toggleMissionReservation } from '../redux/missions/missions'
 
 const ReservedMissions = () => {
@@ -31,7 +32,7 @@ const ReservedMissions = () => {
           ))}
         {!reservedMissions.length && (
           <p className="filtered-list__list__item">
-            There are no reserved missions
+            no reserved missions
           </p>
         )}
       </ul>
