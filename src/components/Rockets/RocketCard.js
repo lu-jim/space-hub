@@ -24,8 +24,8 @@ const RocketCard = (props) => {
           className="img-fluid"
         />
       </div>
-      <div className="col-12 col-lg-9 p-2">
-        <h2 className="d-flex gap-4">
+      <div className="col-12 col-lg-9 pt-2">
+        <h2 className="d-flex gap-2">
           {rocketName}
           <RocketBadge
             isBooked={isBooked}
