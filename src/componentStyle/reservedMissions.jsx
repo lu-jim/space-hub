@@ -14,7 +14,7 @@ const ReservedMissions = () => {
   };
 
   return (
-    <section className="col-5">
+    <section className="col-12 col-lg-5">
       <h2 className="py-2">My Missions</h2>
       <ul className="row col-12 lg-col-5 border m-2 py-2 rounded">
         {!!reservedMissions
@@ -23,7 +23,7 @@ const ReservedMissions = () => {
               <h3>
                 {mission.mission_name}
               </h3>
-              <p>
+              <p className="d-flex flex-column flex-md-row ">
                 <Link to={mission.link} />
                 <Button
                   isMissionJoined={mission.reserved}

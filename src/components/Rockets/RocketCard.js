@@ -19,7 +19,7 @@ const RocketCard = (props) => {
       <div className="col-12 col-lg-3">
         <img
           src={flickrImages[0]}
-          alt="completed"
+          alt={rocketName}
           className="img-fluid"
         />
       </div>
