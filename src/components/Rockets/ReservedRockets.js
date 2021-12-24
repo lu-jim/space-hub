@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bookRocket } from '../../redux/rockets/rockets';
 import BookButton from './BookButton';
+import Link from '../../componentStyle/Link.style';
 
 const ReservedRockets = () => {
   const rockets = useSelector((state) => state.rockets.rockets);
@@ -13,24 +14,27 @@ const ReservedRockets = () => {
 
   return (
     <section className="col-12 col-lg-5">
-      <h2 className="py-2"> My Rockets</h2>
-      <ul className="row col-12 lg-col-5 border m-2 py-2 rounded">
+      <h2 className="p-2"> My Rockets</h2>
+      <ul className="row col-12 lg-col-5 border m-2 py-2 px-0 rounded">
         {!!reservedList
           && reservedList.map(({
-            rocketId, rocketName, flickrImages, isBooked,
+            rocketId, rocketName, flickrImages, isBooked, wikipedia,
           }) => (
-            <li key={rocketId} className="d-flex justify-content-between border-bottom align-items-baseline pt-3 col-12">
-              <h3>
-                {rocketName}
-              </h3>
-              <p>
+            <li key={rocketId} className="d-flex justify-content-between border-bottom align-items-center py-3 col-12">
+              <div className="d-flex align-items-center">
                 <img
                   src={flickrImages[0]}
                   alt={rocketName}
-                  className="img-fluid me-3 border rounded-pill"
+                  className="img-fluid border rounded-pill me-3"
                   width="75"
                   height="75"
                 />
+                <h3>
+                  {rocketName}
+                </h3>
+              </div>
+              <p className="d-flex flex-column flex-lg-row me-3">
+                <Link to={wikipedia} />
                 <BookButton
                   isBooked={isBooked}
                   rocketId={rocketId}
