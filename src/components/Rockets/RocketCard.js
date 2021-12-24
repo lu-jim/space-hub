@@ -26,7 +26,6 @@ const RocketCard = (props) => {
           isBooked={isBooked}
           rocketId={rocketId}
           onClickEvent={(rocketId) => reserveRocket(rocketId)}
-
         />
         {' '}
       </div>
