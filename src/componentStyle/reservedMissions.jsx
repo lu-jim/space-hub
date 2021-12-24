@@ -10,14 +10,21 @@ const ReservedMissions = () => {
       <h2 className="filtered-list__title">My Missions</h2>
       <ul className="filtered-list__list">
         {!!reservedMissions && reservedMissions.map((mission) => (
-          <li>
-            <h3 className="filtered-list__list__item__title" key={mission.mission_id}>
+          <li key={mission.mission_id}>
+            <h3 className="filtered-list__list__item__title">
               {mission.mission_name}
             </h3>
           </li>
         ))}
+        {!reservedMissions.length && (
+          <p className="filtered-list__list__item">
+            No reserved missions
+          </p>
+        )}
 
       </ul>
     </section>
   )
 }
+
+export default ReservedMissions
