@@ -7,7 +7,6 @@ import Profile from './components/Profile';
 import Rockets from './components/Rockets/Rockets';
 import store from './redux/configureStore';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import Missions from './components/Missions';
 
 function App() {

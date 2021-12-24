@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 const BookButton = ({ onClickEvent, isBooked, rocketId }) => {
   const text = isBooked ? 'Cancel Reservation' : 'Book Rocket';
-  const type = isBooked ? 'secondary' : 'primary';
+  const type = isBooked ? 'danger' : 'primary';
   return (
     <Button variant={type} onClick={() => onClickEvent(rocketId)}>
       {text}
