@@ -24,6 +24,8 @@ To get a local copy up and running follow these simple steps.
 - Type Enter to finish the installation process.
 - Run `npm i` and after all the dependencies are installed run `npm start`
 
+### Live Version:
+- [Heroku](https://space-travel-hub.herokuapp.com)
 ## Authors
 
 👤 **Luis Fernando Jimenez**
