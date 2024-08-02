@@ -25,7 +25,7 @@ To get a local copy up and running follow these simple steps.
 - Run `npm i` and after all the dependencies are installed run `npm start`
 
 ### Live Version:
-- [Heroku](https://space-travel-hub.herokuapp.com)
+- [Netlify](https://cheerful-chimera-e6e9d9.netlify.app)
 ## Authors
 
 👤 **Luis Fernando Jimenez**
